@@ -17,12 +17,19 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        loaders: [{
-            test: /\.js|jsx?$/,
-            loader: 'babel'
-        },{
-            test: /\.css$/,
-            loader: 'style!css'
-        }]
+        loaders: [
+            {
+                test: /\.js|jsx?$/,
+                loader: 'babel'
+            },
+            {
+                test: /\.css$/,
+                loader: 'style!css'
+            },
+            {
+                test: /\.scss$/,
+                loader: 'style!css!sass'
+            }
+        ]
     }
 };
