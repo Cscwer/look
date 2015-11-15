@@ -1,28 +1,37 @@
 {
-  "name": "webpack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "test",
-    "build": "webpack",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
+  "name": "material-ui-example",
+  "version": "0.8.0",
+  "description": "Sample project that uses material-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/callemall/material-ui.git"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "material-ui": "^0.13.2",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.2",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.0"
+  "scripts": {
+    "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
+    "build": "webpack --config webpack-production.config.js --progress --colors"
   },
   "devDependencies": {
-    "babel-core": "^5.8.25",
+    "babel-core": "^5.8.21",
+    "babel-eslint": "^4.0.5",
     "babel-loader": "^5.3.2",
-    "css-loader": "^0.23.0",
-    "node-sass": "^3.4.2",
-    "sass-loader": "^3.1.1",
-    "style-loader": "^0.13.0"
+    "babel-runtime": "^5.8.25",
+    "eslint": "^1.1.0",
+    "eslint-loader": "^1.0.0",
+    "eslint-plugin-react": "^3.2.2",
+    "html-webpack-plugin": "^1.6.1",
+    "react-hot-loader": "^1.2.8",
+    "transfer-webpack-plugin": "^0.1.4",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "material-ui": "^0.13.0",
+    "react": "^0.14.0",
+    "react-dom":"^0.14.0",
+    "react-tap-event-plugin": "^0.2.1",    
+    "react-addons-create-fragment": "^0.14.0",
+    "react-addons-pure-render-mixin": "^0.14.0",
+    "react-addons-transition-group": "^0.14.0",
+    "react-addons-update": "^0.14.0"
   }
 }
